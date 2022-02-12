@@ -34,7 +34,7 @@ public class BillboardFilmManager {
         }
 
 
-        BillboardFilm[] result = new BillboardFilm[items.length];
+        BillboardFilm[] result = new BillboardFilm[resultLength];
         for (int i = 0; i < result.length; i++) {
             int index = items.length - i - 1;
             result[i] = items[index];
