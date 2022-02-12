@@ -37,7 +37,7 @@ class BillboardFilmManagerTest {
         manager.save(eleven);
         manager.save(twelve);
 
-        BillboardFilm[] expected = {ten, nine, eight, seven, six, fifth, fourth, third, second, first};
+        BillboardFilm[] expected = {twelve, eleven, ten, nine, eight, seven, six, fifth, fourth, third};
         BillboardFilm[] actual = manager.getAll();
 
         assertArrayEquals(expected, actual);
@@ -59,7 +59,7 @@ class BillboardFilmManagerTest {
         BillboardFilm eleven = new BillboardFilm(11, 11, "eleven", "thriller", 11);
         BillboardFilm twelve = new BillboardFilm(12, 12, "twelve", "drama", 12);
 
-        BillboardFilmManager manager = new BillboardFilmManager(5);
+        BillboardFilmManager manager = new BillboardFilmManager(4);
         manager.save(first);
         manager.save(second);
         manager.save(third);
@@ -72,7 +72,7 @@ class BillboardFilmManagerTest {
         manager.save(eleven);
         manager.save(twelve);
 
-        BillboardFilm[] expected1 = {six, fourth, third, second, first};
+        BillboardFilm[] expected1 = {twelve, eleven, ten, nine};
         BillboardFilm[] actual1 = manager.getAll();
 
         assertArrayEquals(expected1, actual1);
